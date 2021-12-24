@@ -1,0 +1,60 @@
+#include<iostream>
+using namespace std;
+
+//hamayun khan
+//10725
+//section(D)
+
+
+
+int nt(int a)
+{
+ if(a==0)
+ {
+ return 1;
+}
+else
+return 0;	
+}
+void validity_checker(int a,int b, int c, int d)
+{
+  if(a>1||a<0||b>1||b<0||c>1||c<0||d>1||d<0)
+{
+	cout<<"INVALID";
+	exit(0);
+	
+}	
+//else 
+//cout<<"VALID!";
+}
+
+int main()
+{ int a,b,c,d,abc,cd,f;
+int x,y;
+cout<<"Enter 4 bits below: \n";
+cout<<"bit-1= ";
+cin>>a;
+cout<<"bit-2= ";
+cin>>b;
+cout<<"bit-3= ";
+cin>>c;
+cout<<"bit-4= ";
+cin>>d;
+validity_checker(a,b,c,d);
+x=nt(a);
+y=nt(c);
+abc=x*b*y;
+cd=y+d;
+
+if(cd>1)
+{
+	cd=1;
+	if(abc==1&&cd==1)
+	cout<<"RESULT= 0";
+}
+else
+{
+ 
+ cout<<"RESULT= 1";
+}
+}
